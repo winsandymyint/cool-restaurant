@@ -28,3 +28,5 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'carrierwave'
 gem 'fog'
 gem 'figaro'
+gem "mini_magick"
+
