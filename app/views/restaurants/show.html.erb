@@ -21,5 +21,15 @@
   <%= @restaurant.website %>
 </p>
 
+<!-- Adding Google Map  -->
+<iframe
+      width="230"
+      height="230"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC7vfPThjYYWoEQFmkGnqVR9kHHRsTZAA0
+        &q=<%= @restaurant.name.parameterize %>&zoom=14">
+    </iframe>
+</iframe>
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: "btn btn-link" %> |
 <%= link_to 'Back', restaurants_path, class: "btn btn-link" %>
