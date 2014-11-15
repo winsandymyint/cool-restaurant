@@ -1,37 +1,1684 @@
-<p id="notice"><%= notice %></p>
-<div class ="jumbotron">
-  <h2>Cool Restaurant is the best way to find reviews on local restaurants.</h2>
-  <h3>Explore the favorite diners, pastry shops, and eateries in your community.
-  <br>Leave reviews and ratings for your fellow foodies.</h3>
-</div>
-<table class="table table-hover table-condensed">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Phone</th>
-      <th>Website</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>News Maxx - HTML5 Responsive Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="css/bootstrap.css" media="all" />
+        <link rel="stylesheet" href="css/font-awesome.css" media="all" />
+        <link rel="stylesheet" href="css/superfish.css" media="all" />
+        <link rel="stylesheet" href="css/owl.carousel.css" media="all" />
+        <link rel="stylesheet" href="css/owl.theme.css" media="all" />
+        <link rel="stylesheet" href="css/awesome-weather.css" media="all" />
+        <link rel="stylesheet" href="css/jquery.navgoco.css"/>
+        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/responsive.css"/>
+        <script src="js/modernizr.custom.60104.js"></script>
 
-  <tbody>
-    <% @restaurants.each do |restaurant| %>
-      <tr>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.phone %></td>
-        <td><%= restaurant.website %></td>
-        <td><%= link_to 'Show', restaurant, class: "btn btn-link" %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-link" %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" href="css/ie.css" type="text/css" media="all" />
+        <![endif]-->
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+        <!--[if IE 9]>
+            <link rel="stylesheet" href="css/ie9.css" type="text/css" media="all" />
+        <![endif]-->
 
-<%= image_tag "https://s3.amazonaws.com/cool-restaurant/bg4.jpg" %>
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    </head>
+    
+<body class="kopa-home-1">
+
+    <div class="kopa-page-header">
+        
+        <div class="header-top">
+            
+            <div class="wrapper clearfix">
+                
+                <span class="kopa-current-time pull-left">Monday, 3/6/2014 | 10:09 GMT+7</span>
+
+                <nav class="top-nav pull-right">
+                    
+                    <ul class="top-menu clearfix">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                    <!-- top-menu -->
+
+                </nav>
+                <!-- top-nav -->
+
+            </div>
+            <!-- wrapper -->
+
+        </div>
+        <!-- header-top -->
+
+        <div class="header-middle">
+
+            <div class="wrapper">
+
+                <div id="logo-container">
+                    <a href="index.html"><img src="placeholders/logo.png" alt="" /></a>
+                </div>
+                <!-- logo-container -->
+
+                <div id="logo-container-2">
+                    <a href="index.html"><img src="placeholders/logo-2.png" alt="" /></a>
+                </div>
+                <!-- logo-container -->
+
+            </div>
+            <!-- wrapper -->
+                
+            <nav class="main-nav">
+
+                <div class="wrapper clearfix">
+                
+                    <ul class="main-menu clearfix">
+                        
+                        <li class="current-menu-item">
+                            <a href="#">Home</a>
+                            <ul>
+                                <li class="current-menu-item"><a href="index.html">Home style 1</a></li>
+                                <li><a href="index2.html">Home style 2</a></li>
+                                <li><a href="index3.html">Home style 3</a></li>
+                                <li><a href="index4.html">Home style 4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#">Blogs</a>
+                            <ul>
+                                <li><a href="categories1.html">Blog style 1</a></li>
+                                <li><a href="categories2.html">Blog style 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Singles</a>
+                            <ul>
+                                <li><a href="single-standard.html">Single standard</a></li>
+                                <li><a href="single-audio.html">Single audio</a></li>
+                                <li><a href="single-gallery.html">Single gallery</a></li>
+                                <li><a href="single-video.html">Single video</a></li>
+                                <li><a href="single-soundcloud.html">Single soundcloud</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Shop</a>
+                            <ul>
+                                <li><a href="shop.html">Shop list</a></li>
+                                <li><a href="single-product.html">Shop detail</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="elements.html">Elements</a></li>
+                        <li><a href="404.html">Error 404</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+                    <!-- main-menu -->
+
+                    <i class='fa fa-align-justify'></i>
+                
+                    <div class="mobile-menu-wrapper">
+                        <ul id="mobile-menu">
+                            <li>
+                                <a href="#">Home</a>
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home style 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="index2.html">Home style 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="index3.html">Home style 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="index4.html">Home style 4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li>
+                                <a href="#">Blogs</a>
+                                <ul>
+                                    <li>
+                                        <a href="categories1.html">Blog style 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="categories2.html">Blog style 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Singles</a>
+                                <ul>
+                                    <li>
+                                        <a href="single-standard.html">Standard post</a>
+                                    </li>
+                                    <li>
+                                        <a href="single-audio.html">Audio post</a>
+                                    </li>
+                                    <li>
+                                        <a href="single-video.html">Video post</a>
+                                    </li>
+                                    <li>
+                                        <a href="single-gallery.html">Gallery post</a>
+                                    </li>
+                                    <li>
+                                        <a href="single-soundcloud.html">Soundcloud post</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Shop</a>
+                                <ul>
+                                    <li><a href="shop.html">Shop list</a></li>
+                                    <li><a href="single-product.html">Shop detail</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="elements.html">Elements page</a>
+                            </li>
+                            <li>
+                                <a href="404.html">Error 404 page</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact page</a>
+                            </li>
+                        </ul>
+                        <!-- mobile-menu -->
+                    </div>
+                    <!-- mobile-menu-wrapper -->
+
+                </div>
+                <!-- wrapper -->
+
+            </nav>
+            <!-- main-nav -->
+
+            <div class="sb-search-wrapper">
+                <div id="sb-search-m" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search-m">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search"></span>
+                    </form>
+                </div><!--sb-search-->
+            </div><!--sb-search-wrapper-->
+
+            <div class="left-box">
+                <div class="triangle"></div>
+            </div>
+            <!-- left-box -->
+
+        </div>
+        <!-- header-middle -->
+
+        <div class="header-bottom">
+
+            <div class="wrapper">
+
+                <nav class="secondary-nav">
+                    
+                    <ul class="secondary-menu clearfix">
+                            
+                        <li>
+                            <a href="#">Pages</a>
+                            <ul>
+                                <li><a href="#">Gallery page</a></li>
+                                <li><a href="#">Shop page</a></li>
+                                <li><a href="#">Elements page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">SinglePages</a></li>
+                        <li><a href="#">Elements</a></li>
+                        <li><a href="#">Contact</a></li>
+                           
+                    </ul>
+                    <!-- secondary-menu -->
+
+                    <span>Menu</span>
+                
+                    <div class="secondary-mobile-menu-wrapper">
+                        <ul id="secondary-mobile-menu">
+                            <li>
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li><a href="#">Gallery page</a></li>
+                                    <li><a href="#">Shop page</a></li>
+                                    <li><a href="#">Elements page</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Single pages</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Elements</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <!-- mobile-menu -->
+                    </div>
+                    <!-- mobile-menu-wrapper -->
+
+                </nav>
+                <!-- secondary-nav -->
+
+            </div>
+            <!-- wrapper -->
+
+        </div>
+        <!-- header-bottom -->
+
+    </div>
+    <!-- kopa-page-header -->
+
+    <div id="main-content">
+        
+        <div class="widget-area-1">
+            
+            <div class="widget kopa-home-slider-widget">
+                
+                <h4 class="widget-title">Home slider</h4>
+
+                <div class="owl-carousel kopa-home-slider">
+                    <div class="item">
+                        <article class="entry-item">
+                            <div class="entry-thumb">
+                                <img src="http://placehold.it/1349x380" alt="" />
+                            </div>
+                            <!-- entry-thumb -->
+                            <div class="flex-caption">
+                                <h3 class="entry-title"><a href="#">Adrian Peterson exclusive interview</a></h3>
+                                <p>Forget the questionable egg mayo and Coronation chicken triangles you’ll find festering away in your local shop, because all over the country</p>
+                                <span class="arrow-wrapper">
+                                    <span class="arrow-left"></span>
+                                    <span class="arrow-right"></span>
+                                </span>
+                            </div>
+                            <!-- flex-caption -->
+                        </article>
+                        <!-- entry-item -->
+                    </div>
+                    <div class="item">
+                        <article class="entry-item">
+                            <div class="entry-thumb">
+                                <img src="http://placehold.it/1349x380" alt="" />
+                            </div>
+                            <!-- entry-thumb -->
+                            <div class="flex-caption">
+                                <h3 class="entry-title"><a href="#">Adrian Peterson exclusive interview</a></h3>
+                                <p>Forget the questionable egg mayo and Coronation chicken triangles you’ll find festering away in your local shop, because all over the country</p>
+                                <span class="arrow-wrapper">
+                                    <span class="arrow-left"></span>
+                                    <span class="arrow-right"></span>
+                                </span>
+                            </div>
+                            <!-- flex-caption -->
+                        </article>
+                        <!-- entry-item -->
+                    </div>
+                    <div class="item">
+                        <article class="entry-item">
+                            <div class="entry-thumb">
+                                <img src="http://placehold.it/1349x380" alt="" />
+                            </div>
+                            <!-- entry-thumb -->
+                            <div class="flex-caption">
+                                <h3 class="entry-title"><a href="#">Adrian Peterson exclusive interview</a></h3>
+                                <p>Forget the questionable egg mayo and Coronation chicken triangles you’ll find festering away in your local shop, because all over the country</p>
+                                <span class="arrow-wrapper">
+                                    <span class="arrow-left"></span>
+                                    <span class="arrow-right"></span>
+                                </span>
+                            </div>
+                            <!-- flex-caption -->
+                        </article>
+                        <!-- entry-item -->
+                    </div>
+                    <div class="item">
+                        <article class="entry-item">
+                            <div class="entry-thumb">
+                                <img src="http://placehold.it/1349x380" alt="" />
+                            </div>
+                            <!-- entry-thumb -->
+                            <div class="flex-caption">
+                                <h3 class="entry-title"><a href="#">Adrian Peterson exclusive interview</a></h3>
+                                <p>Forget the questionable egg mayo and Coronation chicken triangles you’ll find festering away in your local shop, because all over the country</p>
+                                <span class="arrow-wrapper">
+                                    <span class="arrow-left"></span>
+                                    <span class="arrow-right"></span>
+                                </span>
+                            </div>
+                            <!-- flex-caption -->
+                        </article>
+                        <!-- entry-item -->
+                    </div>
+                </div>
+                <!-- owl-carousel -->
+
+                <div class="left-box">
+                    <div class="triangle"></div>
+                    <div class="triangle-2"></div>
+                    <div class="rectangle"></div>
+                    <span class="square-1"></span>
+                    <span class="square-2"></span>
+                    <span class="square-3"></span>
+                    <span class="square-4"></span>
+                </div>
+                <!-- left-box -->
+
+            </div>
+            <!-- widget -->
+
+            <div class="stripe-box">
+
+                <div class="wrapper">
+                    
+                    <div class="left-color"></div>
+                    
+                    <div class="widget kopa-nothumb-carousel-widget loading">
+                
+                        <h4 class="widget-title">From around the world</h4>
+
+                        <div class="owl-carousel kopa-nothumb-carousel">
+
+                            <div class="item">
+                                <article class="entry-item clearfix">
+                                    <div class="entry-number"><a href="#"><img src="http://placehold.it/60x60" alt="" /></a></div>
+                                    <div class="entry-content">
+                                        <header>
+                                            <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                            <ul class="kopa-rating pull-left clearfix">
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star-o"></a></li>
+                                            </ul>
+                                            <!-- kopa-rating -->
+                                        </header>
+                                        <h6 class="entry-title"><a href="#">Live Now: Convene Founder Answers Questions via Video</a></h6>
+                                    </div>
+                                    <!-- entry-content -->
+                                </article>
+                                <!-- entry-item -->
+                            </div>
+                            <!-- item -->
+
+                            <div class="item">
+                                <article class="entry-item clearfix">
+                                    <div class="entry-number"><a href="#"><img src="http://placehold.it/60x60" alt="" /></a></div>
+                                    <div class="entry-content">
+                                        <header class="clearfix">
+                                            <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                            <ul class="kopa-rating pull-left clearfix">
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star-o"></a></li>
+                                            </ul>
+                                            <!-- kopa-rating -->
+                                        </header>
+                                        <h6 class="entry-title"><a href="#">Tips To Play Angry Birds Effectively</a></h6>
+                                    </div>
+                                    <!-- entry-content -->
+                                </article>
+                                <!-- entry-item -->
+                            </div>
+                            <!-- item -->
+
+                            <div class="item">
+                                <article class="entry-item clearfix">
+                                    <div class="entry-number"><a href="#"><img src="http://placehold.it/60x60" alt="" /></a></div>
+                                    <div class="entry-content">
+                                        <header class="clearfix">
+                                            <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                            <ul class="kopa-rating pull-left clearfix">
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star-o"></a></li>
+                                            </ul>
+                                            <!-- kopa-rating -->
+                                        </header>
+                                        <h6 class="entry-title"><a href="#">Live Now: Convene Founder Answers Questions via Video</a></h6>
+                                    </div>
+                                    <!-- entry-content -->
+                                </article>
+                                <!-- entry-item -->
+                            </div>
+                            <!-- item -->
+
+                            <div class="item">
+                                <article class="entry-item clearfix">
+                                    <div class="entry-number"><a href="#"><img src="http://placehold.it/60x60" alt="" /></a></div>
+                                    <div class="entry-content">
+                                        <header class="clearfix">
+                                            <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                            <ul class="kopa-rating pull-left clearfix">
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star-o"></a></li>
+                                            </ul>
+                                            <!-- kopa-rating -->
+                                        </header>
+                                        <h6 class="entry-title"><a href="#">Tips To Play Angry Birds Effectively</a></h6>
+                                    </div>
+                                    <!-- entry-content -->
+                                </article>
+                                <!-- entry-item -->
+                            </div>
+                            <!-- item -->
+
+                        </div>
+                        <!-- kopa-nothumb-carousel -->
+
+                    </div>
+                    <!-- widget -->
+
+                    <div class="social-links-container">
+                        <div class="social-links-wrapper">
+                            <ul class="social-links clearfix">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                                <li><a href="#" class="fa fa-rss"></a></li>
+                                <li><a href="#" class="fa fa-flickr"></a></li>
+                                <li><a href="#" class="fa fa-tumblr"></a></li>
+                            </ul>
+                            <!-- social-links -->
+                        </div>
+                        <!-- social-links-wrapper -->
+                        <span class="triangle-1st"></span>
+                        <span class="triangle-2nd"></span>
+                    </div>
+                    <!-- social-links-container -->
+
+                    <div class="weather-widget-wrapper">
+                        <span class="triangle-1st"></span>
+                        <span class="triangle-2nd"></span>
+                        <div class="widget widget_awesomeweatherwidget masonry-brick">
+    
+                            <div class="awesome-weather-wrap awecf custom awe_with_stats awe_wide" id="awesome-weather-vietnam">
+                        
+                                <div class="awesome-weather-header">VietNam</div>
+                                
+                                <div class="awesome-weather-current-temp">
+                                    +24<sup>C</sup>
+                                </div> <!-- /.awesome-weather-current-temp -->                        
+                                    
+                                <div class="awesome-weather-todays-stats">
+                                    <div class="awe_desc">moderate rain</div>
+                                    <div class="awe_humidty">humidity: 100% </div>
+                                    <div class="awe_wind">wind: 2km/h NNW</div>
+                                    <div class="awe_highlow"> H 24 • L 24 </div>    
+                                </div> <!-- /.awesome-weather-todays-stats -->
+                                <div class="awesome-weather-forecast awe_days_1 awecf">
+                                    <div class="awesome-weather-forecast-day">
+                                        <div class="awesome-weather-forecast-day-temp">24<sup>C</sup></div>
+                                        <div class="awesome-weather-forecast-day-abbr">Wed</div>
+                                    </div>
+                                 </div> <!-- /.awesome-weather-forecast --></div> <!-- /.awesome-weather-wrap -->
+                            </div>
+                    </div>
+                    <!-- weather-widget-wrapper -->
+
+                </div>
+                <!-- wrapper -->
+
+            </div>
+            <!-- stripe-box -->
+            
+
+        </div>
+        <!-- widget-area-1 -->
+
+        <div class="bn-box">
+
+            <div class="wrapper clearfix">
+                
+                <div class="kp-headline-wrapper clearfix">
+                    <span class="kp-headline-title">Breaking News</span>
+                    <div class="kp-headline clearfix">                        
+                        <dl class="ticker-1 clearfix">
+                            <dd><a href="#">Envato Launches the Microlancer Creative Marketplace</a></dd>
+                            <dd><a href="#">Dalai Lama Visit: President Obama Meets Spiritual Leader, China Complains</a></dd>
+                            <dd><a href="#">Top Gun sequel will see Tom Cruise competing with military drones</a></dd>
+                        </dl>
+                        <!--ticker-1-->
+                    </div>
+                    <!--kp-headline-->
+                </div>
+                <!-- kp-headline-wrapper -->
+
+                <div class="sb-search-wrapper">
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="sb-icon-search"></span>
+                        </form>
+                    </div><!--sb-search-->
+                </div><!--sb-search-wrapper-->
+
+            </div>
+            <!-- wrapper -->
+            
+        </div>
+        <!-- bn-box -->
+
+        <section class="main-section">
+
+                <div class="wrapper clearfix">
+
+                    <div class="main-col pull-left">
+                        
+                        <div class="widget-area-3">
+
+                            <div class="widget kopa masonry-list-widget">
+                                
+                                <h4 class="widget-title">Random Posts</h4>
+
+                                <div class="masonry-wrapper">
+                                    <ul class="clearfix masonry-list">
+                                        <li class="masonry-item">
+                                            <a href="#"><img src="http://placehold.it/420x453" alt="" /></a>
+                                            <h4 class="entry-title"><a href="#">Live Now: Convene Founder Answers Questions via Video</a></h4>
+                                        </li>
+                                        <li class="masonry-item width-2 height-2">
+                                            <a href="#"><img src="http://placehold.it/226x224" alt="" /></a>
+                                            <h4 class="entry-title"><a href="#">10 Fitness Rules Every Man Should Break</a></h4>
+                                        </li>
+                                        <li class="masonry-item width-2 height-2">
+                                            <a href="#"><img src="http://placehold.it/226x224" alt="" /></a>
+                                            <h4 class="entry-title"><a href="#">Now that’s what I call a sandwich</a></h4>
+                                        </li>
+                                        <li class="masonry-item width-3 height-2">
+                                            <a href="#"><img src="http://placehold.it/457x224" alt="" /></a>
+                                            <h4 class="entry-title"><a href="#">Should There be Lights on the Park Arthur Sledding Hill?</a></h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- masonry-wrapper -->
+
+                                <div class="pagination clearfix">
+                                    <ul class="page-numbers clearfix">
+                                        <li><a class="prev page-numbers fa fa-angle-double-left" href="#"></a></li>
+                                        <li><a class="page-numbers" href="#">1</a></li>
+                                        <li><span class="page-numbers current">2</span></li>
+                                        <li><span class="page-numbers dots">…</span></li>
+                                        <li><a class="page-numbers" href="#">8</a></li>
+                                        <li><a class="page-numbers" href="#">9</a></li>
+                                        <li><a href="#" class="next page-numbers fa fa-angle-double-right"></a></li>
+                                    </ul><!--page-numbers-->
+                                </div>
+                                <!-- pagination -->
+
+                            </div>
+                            <!-- widget -->
+
+                        </div>
+                        <!-- widget-area-3 -->
+
+                        <div class="widget-area-4 pull-left">
+                            
+                            <div class="widget kopa-article-list-1-widget clearfix">
+                                
+                                <h4 class="widget-title">Business</h4>
+
+                                <article class="last-item clearfix">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/266x255" alt="" /></a>
+                                    </div>
+                                    <!-- entry-thumb -->
+                                    <div class="entry-content">
+                                        <header>
+                                            <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                            <ul class="kopa-rating pull-left clearfix">
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star"></a></li>
+                                                <li><a href="#" class="fa fa-star-o"></a></li>
+                                            </ul>
+                                            <!-- kopa-rating -->
+                                        </header>
+                                        <h6 class="entry-title"><a href="#">Live Now: Convene Founder Answers Questions via Video</a></h6>
+                                        <p>When they think of cardiovascular health, physical activity such as running often comes to mind ...</p>
+                                        <a href="#" class="more-link"><span>Read more</span></a>
+                                    </div>
+                                    <!-- entry-content -->
+                                </article>
+                                <!-- last-item -->
+
+                                <ul class="older-post clearfix">
+                                    <li>
+                                        <article class="entry-item clearfix">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content">
+                                                <header>
+                                                    <span class="entry-date"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                    <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                    <span class="entry-author">By <a href="#">Admin</a></span>
+                                                </header>
+                                                <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                            </div>
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item clearfix">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content">
+                                                <header>
+                                                    <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                    <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                    <span class="entry-author">By <a href="#">Admin</a></span>
+                                                </header>
+                                                <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                            </div>
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item clearfix">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content">
+                                                <header>
+                                                    <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                    <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                    <span class="entry-author">By <a href="#">Admin</a></span>
+                                                </header>
+                                                <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                            </div>
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item clearfix">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content">
+                                                <header>
+                                                    <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                    <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                    <span class="entry-author">By <a href="#">Admin</a></span>
+                                                </header>
+                                                <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                            </div>
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item clearfix">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content">
+                                                <header>
+                                                    <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                    <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                    <span class="entry-author">By <a href="#">Admin</a></span>
+                                                </header>
+                                                <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                            </div>
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                </ul>
+                                <!-- older-post -->
+
+                            </div>
+                            <!-- widget -->
+
+                            <div class="widget kopa-adv-widget">
+                                <a href="#"><img src="placeholders/banner-1.png" alt="" /></a>
+                            </div>
+                            <!-- widget -->
+
+                            <div class="widget kopa-article-list-2-widget clearfix">
+                                
+                                <h4 class="widget-title">Technology</h4>
+
+                                <ul class="clearfix">
+                                    <li>
+                                        <article class="entry-item clearfix">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/164x234" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content">
+                                                <div class="meta-box">
+                                                    <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                    <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                    <span class="entry-author">By <a href="#">Admin</a></span>
+                                                </div>
+                                                <!-- meta-box -->
+                                                <header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                    <ul class="kopa-rating clearfix">
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star-o"></a></li>
+                                                    </ul>
+                                                    <!-- kopa-rating -->
+                                                </header>
+                                                <p>On the other hand we are with righteous in dislike who are beguiled righteous indignation demoralized charms righteous indignation pleasure the moment, so that by desire, that they can read the pain and in that are in to ensue; and equal blame to those who fail in their duty through weakness of will. On the other hand, we denounce with righteous indignation and dislike men who are so</p>
+                                                <div class="text-center"><a href="#" class="more-link"><span>Read more</span></a></div>
+                                            </div>
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item clearfix">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/164x234" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content">
+                                                <div class="meta-box">
+                                                    <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                    <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                    <span class="entry-author">By <a href="#">Admin</a></span>
+                                                </div>
+                                                <!-- meta-box -->
+                                                <header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                    <ul class="kopa-rating clearfix">
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star-o"></a></li>
+                                                    </ul>
+                                                    <!-- kopa-rating -->
+                                                </header>
+                                                <p>On the other hand we are with righteous in dislike who are beguiled righteous indignation demoralized charms righteous indignation pleasure the moment, so that by desire, that they can read the pain and in that are in to ensue; and equal blame to those who fail in their duty through weakness of will. On the other hand, we denounce with righteous indignation and dislike men who are so</p>
+                                                <div class="text-center"><a href="#" class="more-link"><span>Read more</span></a></div>
+                                            </div>
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item clearfix">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/164x234" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content">
+                                                <div class="meta-box">
+                                                    <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                    <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                    <span class="entry-author">By <a href="#">Admin</a></span>
+                                                </div>
+                                                <!-- meta-box -->
+                                                <header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                    <ul class="kopa-rating clearfix">
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star"></a></li>
+                                                        <li><a href="#" class="fa fa-star-o"></a></li>
+                                                    </ul>
+                                                    <!-- kopa-rating -->
+                                                </header>
+                                                <p>On the other hand we are with righteous in dislike who are beguiled righteous indignation demoralized charms righteous indignation pleasure the moment, so that by desire, that they can read the pain and in that are in to ensue; and equal blame to those who fail in their duty through weakness of will. On the other hand, we denounce with righteous indignation and dislike men who are so</p>
+                                                <div class="text-center"><a href="#" class="more-link"><span>Read more</span></a></div>
+                                            </div>
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- kopa-article-list-2-widget -->
+
+                        </div>
+                        <!-- widget-area-4 -->
+
+                        <div class="widget-area-5 pull-left">
+                            
+                            <div class="widget kopa-adv-widget">
+                                <a href="#"><img src="placeholders/banner-2.jpg" alt="" /></a>
+                            </div>
+                            <!-- widget -->
+
+                            <div class="widget kopa-carousel-list-2-widget">
+                                
+                                <h4 class="widget-title">Fashion</h4>
+
+                                <div class="owl-carousel kopa-owl-carousel-1">
+                                    
+                                    <div class="item">
+                                        
+                                        <ul>
+                                            <li>
+                                                <article class="entry-item">
+                                                    <div class="entry-thumb">
+                                                        <a href="#"><img src="http://placehold.it/217x168" alt="" /></a>
+                                                    </div>
+                                                    <!-- entry-thumb -->
+                                                    <div class="entry-content">
+                                                        <span class="entry-date"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <h6 class="entry-title"><a href="#">Housing Prices in U.S. Cities Rise by Most Since 2006</a></h6>
+                                                    </div>
+                                                    <!-- entry-content -->
+                                                </article>
+                                                <!-- entry-item -->
+                                            </li>
+                                            <li>
+                                                <article class="entry-item">
+                                                    <div class="entry-thumb">
+                                                        <a href="#"><img src="http://placehold.it/217x168" alt="" /></a>
+                                                    </div>
+                                                    <!-- entry-thumb -->
+                                                    <div class="entry-content">
+                                                        <span class="entry-date"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <h6 class="entry-title"><a href="#">Envato Launches the Microlancer Creative Marketplace</a></h6>
+                                                    </div>
+                                                    <!-- entry-content -->
+                                                </article>
+                                                <!-- entry-item -->
+                                            </li>
+                                        </ul>                            
+
+                                    </div>
+                                    <!-- item -->
+
+                                    <div class="item">
+                                        
+                                        <ul>
+                                            <li>
+                                                <article class="entry-item">
+                                                    <div class="entry-thumb">
+                                                        <a href="#"><img src="http://placehold.it/217x168" alt="" /></a>
+                                                    </div>
+                                                    <!-- entry-thumb -->
+                                                    <div class="entry-content">
+                                                        <span class="entry-date"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <h6 class="entry-title"><a href="#">Housing Prices in U.S. Cities Rise by Most Since 2006</a></h6>
+                                                    </div>
+                                                    <!-- entry-content -->
+                                                </article>
+                                                <!-- entry-item -->
+                                            </li>
+                                            <li>
+                                                <article class="entry-item">
+                                                    <div class="entry-thumb">
+                                                        <a href="#"><img src="http://placehold.it/217x168" alt="" /></a>
+                                                    </div>
+                                                    <!-- entry-thumb -->
+                                                    <div class="entry-content">
+                                                        <span class="entry-date"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <h6 class="entry-title"><a href="#">Envato Launches the Microlancer Creative Marketplace</a></h6>
+                                                    </div>
+                                                    <!-- entry-content -->
+                                                </article>
+                                                <!-- entry-item -->
+                                            </li>
+                                        </ul>                            
+
+                                    </div>
+                                    <!-- item -->
+
+                                </div>
+                                <!-- kopa-owl-carousel-1 -->
+
+                            </div>
+                            <!-- kopa-carousel-list-2-widget -->
+
+                        </div>
+                        <!-- widget-area-5 -->
+
+                        <div class="clear"></div>
+
+                        <div class="widget-area-6">
+                            
+                            <div class="widget kopa-adv-widget">
+                                <a href="#"><img src="placeholders/banner-3.png" alt="" /></a>    
+                            </div>
+                            <!-- widget -->
+
+                            <div class="widget kopa-product-list-widget">
+                                
+                                <h4 class="widget-title">Latest products</h4>
+
+                                <ul class="clearfix">
+                                    <li>
+                                        <article class="entry-item">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/190x270" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content text-center">
+                                                <h6 class="entry-title"><a href="#">Vest</a></h6>
+                                                <div class="pricebox">
+                                                    <span class="default-price">$15.00</span>
+                                                    <span class="sale-price">$12.00</span>
+                                                </div>
+                                                <a href="#" class="add-cart-button icon-btn red-btn"><span>Add to cart</span></a>
+                                            </div>
+                                            <!-- entry-content -->
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/190x270" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content text-center">
+                                                <h6 class="entry-title"><a href="#">Dress</a></h6>
+                                                <div class="pricebox">
+                                                    <span class="default-price">$15.00</span>
+                                                    <span class="sale-price">$12.00</span>
+                                                </div>
+                                                <a href="#" class="add-cart-button icon-btn red-btn"><span>Add to cart</span></a>
+                                            </div>
+                                            <!-- entry-content -->
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/190x270" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content text-center">
+                                                <h6 class="entry-title"><a href="#">Grouped Groduct</a></h6>
+                                                <div class="pricebox">
+                                                    <span class="default-price">$15.00</span>
+                                                    <span class="sale-price">$12.00</span>
+                                                </div>
+                                                <a href="#" class="add-cart-button icon-btn red-btn"><span>Add to cart</span></a>
+                                            </div>
+                                            <!-- entry-content -->
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                    <li>
+                                        <article class="entry-item">
+                                            <div class="entry-thumb">
+                                                <a href="#"><img src="http://placehold.it/190x270" alt="" /></a>
+                                            </div>
+                                            <div class="entry-content text-center">
+                                                <h6 class="entry-title"><a href="#">Grouped Groduct</a></h6>
+                                                <div class="pricebox">
+                                                    <span class="default-price">$15.00</span>
+                                                    <span class="sale-price">$12.00</span>
+                                                </div>
+                                                <a href="#" class="add-cart-button icon-btn red-btn"><span>Add to cart</span></a>
+                                            </div>
+                                            <!-- entry-content -->
+                                        </article>
+                                        <!-- entry-item -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- widget -->
+
+                        </div>
+                        <!-- widget-area-6 -->
+
+                    </div>
+                    <!-- main-col -->
+
+                    <div class="sidebar widget-area-2 pull-left">
+                        
+                        <div class="widget kopa-article-list-1-widget">
+                                
+                            <h4 class="widget-title">Entertainment</h4>
+
+                            <article class="last-item clearfix">
+                                <div class="entry-thumb">
+                                    <a href="#"><img src="http://placehold.it/267x256" alt="" /></a>
+                                </div>
+                                <!-- entry-thumb -->
+                                <div class="entry-content">
+                                    <header>
+                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                        <ul class="kopa-rating pull-left clearfix">
+                                            <li><a href="#" class="fa fa-star"></a></li>
+                                            <li><a href="#" class="fa fa-star"></a></li>
+                                            <li><a href="#" class="fa fa-star"></a></li>
+                                            <li><a href="#" class="fa fa-star"></a></li>
+                                            <li><a href="#" class="fa fa-star-o"></a></li>
+                                        </ul>
+                                        <!-- kopa-rating -->
+                                    </header>
+                                    <h6 class="entry-title"><a href="#">Live Now: Convene Founder Answers Questions via Video</a></h6>
+                                    <p>When we think of cardiovascular health, physical activity such as running often comes to mind...</p>
+                                    <a href="#" class="more-link"><span>Read more</span></a>
+                                </div>
+                                <!-- entry-content -->
+                            </article>
+                            <!-- last-item -->
+
+                            <ul class="older-post clearfix">
+                                <li>
+                                    <article class="entry-item clearfix">
+                                        <div class="entry-thumb">
+                                            <a href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <header>
+                                                <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                <span class="entry-author">By <a href="#">Admin</a></span>
+                                            </header>
+                                            <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                        </div>
+                                    </article>
+                                    <!-- entry-item -->
+                                </li>
+                                <li>
+                                    <article class="entry-item clearfix">
+                                        <div class="entry-thumb">
+                                            <a href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <header>
+                                                <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                <span class="entry-author">By <a href="#">Admin</a></span>
+                                            </header>
+                                            <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                        </div>
+                                    </article>
+                                    <!-- entry-item -->
+                                </li>
+                                <li>
+                                    <article class="entry-item clearfix">
+                                        <div class="entry-thumb">
+                                            <a href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                        </div>
+                                        <div class="entry-content">
+                                            <header>
+                                                <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                <span class="entry-author">By <a href="#">Admin</a></span>
+                                            </header>
+                                            <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                        </div>
+                                    </article>
+                                    <!-- entry-item -->
+                                </li>
+                            </ul>
+                            <!-- older-post -->
+
+                        </div>
+                        <!-- widget -->
+
+                        <div class="widget kopa-video-widget clearfix">
+                            <h4 class="widget-title">New media</h4>
+
+                            <article class="last-item">
+                                <div class="entry-thumb">
+                                    <a href="#"><img src="http://placehold.it/267x180" alt="" /></a>
+                                    <a href="#" class="entry-icon fa fa-play"></a>
+                                    <div class="meta-box clearfix">                                        
+                                        <span class="entry-date pull-left"><i class="fa fa-film"></i>May 2, 2014</span>
+                                        <span class="entry-meta pull-left">&nbsp;/&nbsp;</span>
+                                        <span class="entry-author pull-left">By <a href="#">Admin</a></span>
+                                    </div>
+                                    <!-- meta-box -->
+                                </div>
+                                <div class="entry-content">
+                                    <h6 class="entry-title"><a href="#">Live Now: Convene Founder Answers Questions via Video</a></h6>
+                                    <ul class="kopa-rating clearfix">
+                                        <li><a href="#" class="fa fa-star"></a></li>
+                                        <li><a href="#" class="fa fa-star"></a></li>
+                                        <li><a href="#" class="fa fa-star"></a></li>
+                                        <li><a href="#" class="fa fa-star"></a></li>
+                                        <li><a href="#" class="fa fa-star-o"></a></li>
+                                    </ul>
+                                    <!-- kopa-rating -->
+                                </div>
+                            </article>
+
+                            <ul class="older-post clearfix">
+                                
+                                <li>
+                                    <h6 class="entry-title"><a href="#"><i class="fa fa-film"></i>Now that’s what I call a sandwich</a></h6>
+                                </li>
+                                <li>
+                                    <h6 class="entry-title"><a href="#"><i class="fa fa-film"></i>Now that’s what I call a sandwich</a></h6>
+                                </li>
+                                <li>
+                                    <h6 class="entry-title"><a href="#"><i class="fa fa-film"></i>Now that’s what I call a sandwich</a></h6>
+                                </li>  
+
+                            </ul>
+
+                        </div>
+                        <!-- widget -->
+
+                        <div class="widget-area-7 pull-left">
+                            
+                            <div class="widget widget_categories">
+                                
+                                <h4 class="widget-title">Categories</h4>      
+                                <ul>
+
+                                    <li><a href="#" title="">Blog&nbsp;(1)</a></li>
+                                    <li><a href="#" title="">Business&nbsp;(4)</a></li>
+                                    <li><a href="#" title="">Entertainment&nbsp;(5)</a></li>
+                                    <li><a href="#" title="">Fashion&nbsp;(3)</a></li>
+                                    <li><a href="#" title="">Politic&nbsp;(5)</a></li>
+                                    <li><a href="#" title="">Technology&nbsp;(3)</a></li>
+                                    <li><a href="#" title="">Uncategoried&nbsp;(1)</a></li>
+
+                                </ul>
+
+                            </div>
+                            <!-- widget_categories -->
+
+                        </div>
+                        <!-- widget-area-7 -->
+
+                        <div class="widget-area-8 pull-left">
+                            
+                            <div class="widget widget_archive">
+
+                                <h4 class="widget-title">Archives</h4>
+
+                                <ul>
+                                    <li><a title="" href="#">May 2014</a>&nbsp;(15)</li>
+                                    <li><a title="" href="#">April 2014</a>&nbsp;(12)</li>
+                                    <li><a title="" href="#">March 2014</a>&nbsp;(10)</li>
+                                    <li><a title="" href="#">February 2014</a>&nbsp;(9)</li>
+                                    <li><a title="" href="#">January 2014</a>&nbsp;(5)</li>
+                                </ul>
+
+                            </div>
+                            <!-- widget_archive -->
+
+                        </div>
+                        <!-- widget-area-8 -->
+
+                        <div class="clear"></div>
+
+                        <div class="widget widget_tag_cloud">
+                            <h4 class="widget-title">Tags</h4>
+                            <div class="tagcloud">
+                                <a href="#">Life Style</a>
+                                <a href="#">Customize</a>
+                                <a href="#">Search</a>
+                                <a href="#">Photo</a>
+                                <a href="#">Blog Post</a>
+                                <a href="#">Music</a>
+                                <a href="#">Black &amp; White</a>
+                                <a href="#">Blue sky</a>
+                                <a href="#">Cartoon</a>
+                            </div>
+                        </div>
+                        <!-- widget -->
+
+                        <div class="widget kopa-gallery-widget">
+                            
+                            <h4 class="widget-title">New Gallery</h4>
+
+                            <ul class="clearfix">
+                                <li><a href="#"><img src="http://placehold.it/127x97" alt="" /></a></li>
+                                <li><a href="#"><img src="http://placehold.it/127x97" alt="" /></a></li>
+                                <li><a href="#"><img src="http://placehold.it/127x97" alt="" /></a></li>
+                                <li><a href="#"><img src="http://placehold.it/127x97" alt="" /></a></li>
+                            </ul>
+
+                        </div>
+                        <!-- widget -->
+
+                        <div class="widget kopa-tab-1-widget">
+                            
+                            <ul class="nav nav-tabs kopa-tabs-1">
+                                <li class="active"><a data-toggle="tab" href="#tab1-1">Popular</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab1-2">Random</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab1-3">Comment</a></li>   
+                            </ul>
+                            <!-- nav-tabs -->
+
+                            <div class="tab-content">
+                                <div id="tab1-1" class="tab-pane active">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- tab-panel -->
+                                <div id="tab1-2" class="tab-pane">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- tab-panel -->
+                                <div id="tab1-3" class="tab-pane">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        
+                                        <li>
+                                            <article class="entry-item clearfix">
+                                                <div class="entry-thumb">
+                                                    <a class="" href="#"><img src="http://placehold.it/60x60" alt="" /></a>
+                                                </div> 
+                                                <div class="entry-content">
+                                                    <header>
+                                                        <span class="entry-date pull-left"><i class="fa fa-pencil-square-o"></i>May 2, 2014</span>
+                                                        <span class="entry-meta">&nbsp;/&nbsp;</span>
+                                                        <span class="entry-author">By <a href="#">Admin</a></span>
+                                                    </header>
+                                                    <h6 class="entry-title"><a href="#">Prada and Miu Miu share dark and surreal Fall 2013</a></h6>
+                                                </div>
+                                            </article>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- tab-panel -->
+                            </div>
+                            <!-- tab-content -->
+
+                        </div>
+                        <!-- widget -->
+
+                    </div>
+                    <!-- widget-area-2 -->
+
+                    <div class="clear"></div>
+
+                </div>
+                <!-- wrapper -->
+            
+        </section>
+        <!-- main-section -->
+
+    </div>
+    <!-- main-content -->
+
+    <section class="dark-box">
+        
+        <div class="wrapper">
+            
+            <nav id="bottom-nav" class="text-center">
+                
+                <ul id="bottom-menu" class="clearfix">
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Single Pages</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Multi-Media</a></li>
+                    <li><a href="#">Elements</a></li>
+                    <li><a href="#">Shop</a></li>    
+                </ul>
+                <!-- bottom-menu -->
+
+                <i class='fa fa-align-justify'></i>
+                
+                <div class="bottom-mobile-menu-wrapper">
+                    <ul id="bottom-mobile-menu">
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Single pages</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Multi-media</a></li>
+                        <li><a href="#">Elements</a></li>
+                        <li><a href="#">Shop</a></li>
+                    </ul>
+                    <!-- mobile-menu -->
+                </div>
+                <!-- mobile-menu-wrapper -->
+
+            </nav>
+            <!-- bottom-nav -->
+
+        </div>
+        <!-- wrapper -->
+
+    </section>
+    <!-- dark-box -->
+
+    <section id="bottom-sidebar">
+        
+        <div class="wrapper">
+
+            <div class="row">
+                
+                <div class="col-md-3 col-sm-3 widget-area-9">
+                    
+                    <div class="bottom-logo">
+                        <a href="index.html"><img src="placeholders/logo.png" alt="" /></a>    
+                    </div>
+                    <!-- bottom-logo -->
+
+                    <div class="widget widget_text">
+
+                        <p>November heralds a month of moustaches (of varying success rates) thanks to the Movember charity appeal. For 30 days the non</p>
+                        
+                    </div>
+                    <!-- widget_text -->
+
+                    <div class="widget kopa-newsletter-widget">
+                        <form class="newsletter-form clearfix" method="post" action="processNewsletterForm.php">
+                            <p class="input-email clearfix">
+                                <input type="text" size="40" class="email" value="Enter your email address ..." name="email" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';">
+                                <input type="submit" class="submit" value="Signup">
+                            </p>                    
+                        </form>
+                        <div id="newsletter-response"></div>
+                    </div>
+                    <!-- kopa-newsletter-widget -->
+
+                    <div class="widget kopa-social-links-widget">
+                        
+                        <ul class="social-links clearfix">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-google-plus"></a></li>
+                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                            <li><a href="#" class="fa fa-rss"></a></li>
+                            <li><a href="#" class="fa fa-flickr"></a></li>
+                            <li><a href="#" class="fa fa-tumblr"></a></li>
+                        </ul>
+                        <!-- social-links -->
+
+                    </div>
+                    <!-- kopa-social-links-widget -->
+
+                </div>
+                <!-- col-md-3 -->
+
+                <div class="col-md-3 col-sm-3 widget-area-10">
+                    
+                    <div class="widget kopa-twitter-widget">
+                        
+                        <h4 class="widget-title">Recent <span>tweets</span></h4>
+
+                        <ul>
+                            <li>
+                                <article class="tweet-item clearfix">
+                                    <span class="tweet-avatar fa fa-twitter"></span>
+                                    <div class="tweet-content">
+                                        <p>RealBlog - Responsive WordPress Blog Theme - <a href="#">http://kopasoft/</a> over a year ago</p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="tweet-item clearfix">
+                                    <span class="tweet-avatar fa fa-twitter"></span>
+                                    <div class="tweet-content">
+                                        <p>RealBlog - Responsive WordPress Blog Theme - <a href="#">http://kopasoft/</a> over a year ago</p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="tweet-item clearfix">
+                                    <span class="tweet-avatar fa fa-twitter"></span>
+                                    <div class="tweet-content">
+                                        <p>RealBlog - Responsive WordPress Blog Theme - <a href="#">http://kopasoft/</a> over a year ago</p>
+                                    </div>
+                                </article>
+                            </li>    
+                        </ul>
+
+                    </div>
+                    <!-- widget -->
+
+                </div>
+                <!-- col-md-3 -->
+
+                <div class="col-md-3 col-sm-3 widget-area-11">
+                    
+                    <div class="widget kopa-flickr-widget">
+                        <h4 class="widget-title">Photo <span>On Flickr</span></h4>
+                        <!-- widget-title -->
+                        <div class="widget-content">
+                            <div class="flickr-wrap clearfix" data-user="78715597@N07">
+                                <ul class="clearfix list-unstyled"></ul>
+                            </div>
+                            <!--flickr-wrap-->
+                        </div>
+                        <!-- widget-content -->
+                    </div>
+                    <!-- widget -->
+
+                </div>
+                <!-- col-md-3 -->
+
+                <div class="col-md-3 col-sm-3 widget-area-12">
+                    
+                    <div class="widget kopa-contact-info-widget">
+                        
+                        <h4 class="widget-title">Contact <span>Us</span></h4>
+
+                        <div class="contact-map">
+                            <img src="placeholders/conact-map.png" alt="" />
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="clearfix"><i class="fa fa-envelope"></i><strong>Email: </strong><a href="mailto:kopatheme@gmail.com">kopatheme@gmail.com</a></p>
+                            <p class="clearfix"><i class="fa fa-phone"></i><strong>Phone: </strong><a href="calto:893434234">+61 (0) 3 8376 6286</a></p>
+                            <p class="clearfix"><i class="fa fa-print"></i><strong>Fax: </strong><a href="calto:893434234">+61 (0) 3 8376 6286</a></p>
+                            <p class="clearfix"><i class="fa fa-map-marker"></i><strong>Address: </strong><span>8775 Georgetown Road, Cambridge, Ohio, 43725, USA</span></p>
+                        </div>
+
+                    </div>
+                    <!-- widget -->
+
+                </div>
+                <!-- col-md-3 -->
+
+            </div>
+            <!-- row -->
+
+        </div>
+        <!-- wrapper -->
+
+    </section>
+    <!-- bottom-sidebar -->
+
+    <footer class="kopa-page-footer">
+        
+        <div class="wrapper">
+
+            <p id="copyright">Copyright 2014 - Kopasoft. All Rights Reserved.</p>
+
+        </div>
+        <!-- wrapper -->
+
+    </footer>
+    <!-- kopa-page-footer -->
+
+    
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <script src="js/custom.js" charset="utf-8"></script>
+
+    <script>
+        new UISearch( document.getElementById( 'sb-search' ) );
+        new UISearch( document.getElementById( 'sb-search-m' ) );
+    </script>
+    
+</body>
+
+</html>
